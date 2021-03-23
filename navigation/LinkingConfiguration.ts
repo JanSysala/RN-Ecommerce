@@ -6,9 +6,9 @@ export default {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Shop: {
             screens: {
-              TabOneScreen: 'one',
+              ShopScreen: 'one',
             },
           },
           TabTwo: {
