@@ -1,29 +1,34 @@
-import {Item} from "../models/shop";
+import { Product } from "../models/shop";
 
-export const items: Item[] = [
+export const items: Product[] = [
     {
-        name: 'Salad',
+        id: 1,
+        name: 'Office',
         price: 13.37,
         image: 'https://picsum.photos/200'
     },
     {
-        name: 'Guest',
+        id: 2,
+        name: 'Lemon',
         price: 420.69,
         image: 'https://picsum.photos/200'
     },
     {
+        id: 3,
         name: 'Truth',
-        price: 34.99,
+        price: 3.35,
         image: 'https://picsum.photos/200'
     },
     {
-        name: 'Union',
-        price: 56.99,
+        id: 4,
+        name: 'Tree',
+        price: 3.35,
         image: 'https://picsum.photos/200'
     },
     {
-        name: 'Shirt',
-        price: 78.99,
+        id: 5,
+        name: 'Side',
+        price: 3.35,
         image: 'https://picsum.photos/200'
-    },
+    }
 ]
