@@ -1,18 +1,13 @@
 import React, { useContext } from 'react';
 import { Image } from 'react-native';
-import { Body, Button, Card, CardItem, Icon, Left, Right, Text } from 'native-base';
+import { Body, Button, Card, CardItem, Icon, Left, Right, Text, Toast } from 'native-base';
 import { Product } from '../models/shop';
-import Reducer from '../context/Reducer';
-import { GlobalContext } from '../context/Store';
+import { CartContext } from '../context/CartContext';
 
 export function ItemCard(props: { item: Product }) {
 
-    const { addItem } = useContext(GlobalContext);
-
-
-    const addToCart = (item: Product) => {
-        addItem(item)
-    };
+    // @ts-ignore
+    const { addProduct } = useContext(CartContext);
 
     return (
         <Card style={{ width: '40%' }}>
@@ -30,7 +25,7 @@ export function ItemCard(props: { item: Product }) {
             <CardItem>
                 <Right>
                     <Button
-                        onPress={() => addToCart(props.item)}
+                        onPress={() => addProduct(props.item)}
                         transparent>
                         <Icon active name="cart" />
                     </Button>

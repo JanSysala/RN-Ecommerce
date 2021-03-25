@@ -1,34 +1,22 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
+import { Cart } from '../components/Cart';
 
-import { ItemCard } from '../components/ItemCard';
-import { productsData } from '../data/products';
-import { Product } from '../models/shop';
-
-export default function ShopScreen() {
-
+export default function CartScreen() {
   return (
     <ScrollView
       horizontal={false}
       scrollEnabled={true}
       contentContainerStyle={styles.container}>
-      {productsData.map((item: Product) => (
-        <ItemCard
-          key={item.name}
-          item={item} />
-      ))}
+      <Cart />
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
-    flexGrow: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-    flexWrap: 'wrap',
-    flexDirection: 'row'
+    alignItems: 'stretch'
   },
   title: {
     fontSize: 20,

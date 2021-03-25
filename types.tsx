@@ -5,13 +5,13 @@ export type RootStackParamList = {
 
 export type BottomTabParamList = {
   Shop: undefined;
-  TabTwo: undefined;
+  Cart: undefined;
 };
 
 export type ShopParamList = {
   ShopScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type CartParamList = {
+  CartScreen: undefined;
 };

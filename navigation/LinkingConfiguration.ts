@@ -11,9 +11,9 @@ export default {
               ShopScreen: 'one',
             },
           },
-          TabTwo: {
+          Cart: {
             screens: {
-              TabTwoScreen: 'two',
+              CartScreen: 'two',
             },
           },
         },

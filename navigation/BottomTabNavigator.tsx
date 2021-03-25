@@ -1,13 +1,13 @@
-import {Ionicons} from '@expo/vector-icons';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createStackNavigator} from '@react-navigation/stack';
+import { Ionicons } from '@expo/vector-icons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ShopScreen from '../screens/ShopScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import {BottomTabParamList, ShopParamList, TabTwoParamList} from '../types';
+import CartScreen from '../screens/CartScreen';
+import { BottomTabParamList, ShopParamList, CartParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -26,8 +26,8 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Cart"
+        component={CartNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -58,16 +58,16 @@ function ShopNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const CartStack = createStackNavigator<CartParamList>();
 
-function TabTwoNavigator() {
+function CartNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+    <CartStack.Navigator>
+      <CartStack.Screen
+        name="CartScreen"
+        component={CartScreen}
+        options={{ headerTitle: 'Cart' }}
       />
-    </TabTwoStack.Navigator>
+    </CartStack.Navigator>
   );
 }
